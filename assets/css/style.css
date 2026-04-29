@@ -1,4 +1,28 @@
+#display1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 #display2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#display3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#display4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#display5 {
     display: flex;
     align-items: center;
     gap: 10px;
