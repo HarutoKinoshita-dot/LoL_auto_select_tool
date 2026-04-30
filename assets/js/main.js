@@ -23,7 +23,7 @@ function showDragon() {
     display1.innerHTML = `
         <div class="lane-card">
             <h3>【ドラゴン】</h3>
-            <p>チャンピオン：${champ.name}</p>
+            <p>チャンピオン：${champ.name}</p><img src="${champ.image}" alt="${champ.name}">
             <p>アイテム1：${items[0].name}(${items[0].type})</p>
             <p>アイテム2：${items[1].name}(${items[1].type})</p>
             <p>アイテム3：${items[2].name}(${items[2].type})</p>
