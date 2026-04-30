@@ -8,112 +8,48 @@ const display5 = document.getElementById('display5');
 
 // クリックイベントの処理
 btn.addEventListener('click', () => {
-    showDragon();
-    showSupport();
-    showMid();
-    showBaron();
-    showJungle();
+    LANE_TYPE.forEach((lane) => {
+        let html = "";
+
+        if (lane.name === "サポート") {
+            html = createHtmlType1(
+                lane.name,
+                getRandomChampExcluding(lane.name),
+                getRandomItems(4),
+                getBoots(),
+                getSupportItem()
+            );
+        } else {
+            html = createHtmlType2(
+                lane.name,
+                getRandomChampExcluding(lane.name),
+                getRandomItems(5),
+                getBoots(),
+                getEnchants()
+            );
+        }
+
+        switch (lane.name) {
+            case "ドラゴン":
+                display1.innerHTML = html;
+                break;
+            case "サポート":
+                display2.innerHTML = html;;
+                break;
+            case "ミッド":
+                display3.innerHTML = html;;
+                break;
+            case "バロン":
+                display4.innerHTML = html;;
+                break;
+            case "ジャングル":
+                display5.innerHTML = html;;
+                break;
+            default:
+                console.log("Unknown lane type");
+        }
+    });
 });
-
-function showDragon() {
-    const champ = getRandomChampExcluding('ドラゴン');
-    const items = getRandomItems(5);
-    const boots = getBoots();
-    const enchants = getEnchants();
-    display1.innerHTML = `
-        <div class="lane-card">
-            <h3>【ドラゴン】</h3>
-            <p>チャンピオン：${champ.name}</p><img src="${champ.image}" alt="${champ.name}">
-            <p>アイテム1：${items[0].name}(${items[0].type})</p>
-            <p>アイテム2：${items[1].name}(${items[1].type})</p>
-            <p>アイテム3：${items[2].name}(${items[2].type})</p>
-            <p>アイテム4：${items[3].name}(${items[3].type})</p>
-            <p>アイテム5：${items[4].name}(${items[4].type})</p>
-            <p>アイテム6：${boots.name}</p>
-            <p>アイテム7：${enchants.name}</p>
-        </div>
-    `;
-}
-
-function showSupport() {
-    const champ = getRandomChampExcluding('サポート');
-    const items = getRandomItems(4);
-    const boots = getBoots();
-    const supportItem = getSupportItem();
-    display2.innerHTML = `
-        <div class="lane-card">
-            <h3>【サポート】</h3>
-            <p>チャンピオン：${champ.name}</p>
-            <p>アイテム1：${items[0].name}(${items[0].type})</p>
-            <p>アイテム2：${items[1].name}(${items[1].type})</p>
-            <p>アイテム3：${items[2].name}(${items[2].type})</p>
-            <p>アイテム4：${items[3].name}(${items[3].type})</p>
-            <p>アイテム5：${boots.name}</p>
-            <p>アイテム6：${supportItem.name}</p>
-        </div>
-    `;
-}
-
-function showMid() {
-    const champ = getRandomChampExcluding('ミッド');
-    const items = getRandomItems(5);
-    const boots = getBoots();
-    const enchants = getEnchants();
-    display3.innerHTML = `
-        <div class="lane-card">
-            <h3>【ミッド】</h3>
-            <p>チャンピオン：${champ.name}</p>
-            <p>アイテム1：${items[0].name}(${items[0].type})</p>
-            <p>アイテム2：${items[1].name}(${items[1].type})</p>
-            <p>アイテム3：${items[2].name}(${items[2].type})</p>
-            <p>アイテム4：${items[3].name}(${items[3].type})</p>
-            <p>アイテム5：${items[4].name}(${items[4].type})</p>
-            <p>アイテム6：${boots.name}</p>
-            <p>アイテム7：${enchants.name}</p>
-        </div>
-    `;
-}
-
-function showBaron() {
-    const champ = getRandomChampExcluding('バロン');
-    const items = getRandomItems(5);
-    const boots = getBoots();
-    const enchants = getEnchants();
-    display4.innerHTML = `
-        <div class="lane-card">
-            <h3>【バロン】</h3>
-            <p>チャンピオン：${champ.name}</p>
-            <p>アイテム1：${items[0].name}(${items[0].type})</p>
-            <p>アイテム2：${items[1].name}(${items[1].type})</p>
-            <p>アイテム3：${items[2].name}(${items[2].type})</p>
-            <p>アイテム4：${items[3].name}(${items[3].type})</p>
-            <p>アイテム5：${items[4].name}(${items[4].type})</p>
-            <p>アイテム6：${boots.name}</p>
-            <p>アイテム7：${enchants.name}</p>
-        </div>
-    `;
-}
-
-function showJungle() {
-    const champ = getRandomChampExcluding('ジャングル');
-    const items = getRandomItems(5);
-    const boots = getBoots();
-    const enchants = getEnchants();
-    display5.innerHTML = `
-        <div class="lane-card">
-            <h3>【ジャングル】</h3>
-            <p>チャンピオン：${champ.name}</p>
-            <p>アイテム1：${items[0].name}(${items[0].type})</p>
-            <p>アイテム2：${items[1].name}(${items[1].type})</p>
-            <p>アイテム3：${items[2].name}(${items[2].type})</p>
-            <p>アイテム4：${items[3].name}(${items[3].type})</p>
-            <p>アイテム5：${items[4].name}(${items[4].type})</p>
-            <p>アイテム6：${boots.name}</p>
-            <p>アイテム7：${enchants.name}</p>
-        </div>
-    `;
-}
-
 
 // champions
 function getRandomChampExcluding(excludeRole) {
@@ -148,4 +84,81 @@ function getEnchants() {
 function getSupportItem() {
     const randomIndex = Math.floor(Math.random() * SUPPORT_ITEMS.length);
     return SUPPORT_ITEMS[randomIndex];
+}
+
+function createHtmlType1(laneName, champ, items, boots, supportItem) {
+    return `
+        <div class="lane-card">
+            <div class="lane-header">
+                <h3>${laneName}</h3>
+            </div>
+
+            <div class="champ-section">
+                <img src="${champ.image}" alt="${champ.name}" class="champ-img">
+                <div class="champ-info">
+                    <span class="label">チャンピオン</span>
+                    <p class="name">${champ.name}</p>
+                </div>
+            </div>
+
+            <div class="items-grid">
+                <!-- 通常アイテム 4つ -->
+                ${items.map(item => `
+                    <div class="item-slot">
+                        <img src="${item.image}" alt="${item.name}" title="${item.name}">
+                        <span class="item-name">${item.name}</span>
+                    </div>
+                `).join('')}
+                
+                <!-- ブーツ -->
+                <div class="item-slot boots">
+                    <img src="${boots.image}" alt="${boots.name}">
+                    <span class="item-name">${boots.name}</span>
+                </div>
+
+                <!-- サポートアイテム -->
+                <div class="item-slot support">
+                    <img src="${supportItem.image}" alt="${supportItem.name}">
+                    <span class="item-name">${supportItem.name}</span>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function createHtmlType2(laneName, champ, items, boots, enchants) {
+    return `
+        <div class="lane-card">
+            <div class="lane-header">
+                <h3>${laneName}</h3>
+            </div>
+
+            <div class="champ-section">
+                <img src="${champ.image}" alt="${champ.name}" class="champ-img">
+                <div class="champ-info">
+                    <span class="label">チャンピオン</span>
+                    <p class="name">${champ.name}</p>
+                </div>
+            </div>
+
+            <div class="items-grid">
+                ${items.map(item => `
+                    <div class="item-slot">
+                        <img src="${item.image}" alt="${item.name}" title="${item.name}">
+                        <span class="item-name">${item.name}</span>
+                    </div>
+                `).join('')}
+                
+                <div class="item-slot boots">
+                    <img src="${boots.image}" alt="${boots.name}">
+                    <span class="item-name">${boots.name}</span>
+                </div>
+
+                <div class="item-slot enchant">
+                    <img src="${enchants.image}" alt="${enchants.name}">
+                    <span class="item-name">${enchants.name}</span>
+                </div>
+            </div>
+        </div>
+    `;
 }
