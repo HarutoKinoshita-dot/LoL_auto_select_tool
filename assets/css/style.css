@@ -134,13 +134,6 @@
     overflow: hidden;
     white-space: nowrap;
     position: relative;
-}
-
-.item-name-container {
-    flex: 1;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
     min-width: 0;
 }
 
@@ -187,7 +180,6 @@
     transform: translateY(-1px);
 }
 
-/* --- Smartphone Layout --- */
 @media (max-width: 800px) {
     .lol-bg {
         padding-top: 20px;
@@ -204,17 +196,24 @@
 
     .team-grid {
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         align-items: center;
-        gap: 20px;
+        gap: 15px;
         overflow-x: hidden;
         min-height: auto;
     }
 
     .lane-card {
-        flex: 1 1 auto;
-        width: 90%;
-        max-width: 350px;
+        flex: 0 0 300px;
+        width: 300px;
+        max-width: 90vw;
+        box-sizing: border-box;
+    }
+
+    .item-name-container {
+        width: 0;
+        flex: 1 1 0;
+        min-width: 0;
     }
 
     .item-name {
