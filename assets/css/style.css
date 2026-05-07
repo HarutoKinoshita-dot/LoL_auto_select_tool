@@ -195,28 +195,36 @@
     }
 
     .team-grid {
+        display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center;
         gap: 15px;
         overflow-x: hidden;
         min-height: auto;
+        width: 100%;
     }
 
     .lane-card {
-        flex: 0 0 300px;
+        flex: none;
         width: 300px;
-        max-width: 90vw;
+        min-width: 300px;
+        max-width: 300px;
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
     }
 
     .item-name-container {
         width: 0;
-        flex: 1 1 0;
+        flex: 1;
         min-width: 0;
+        overflow: hidden;
     }
 
     .item-name {
         font-size: 0.8rem;
+        white-space: nowrap;
     }
 }
