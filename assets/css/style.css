@@ -1,131 +1,223 @@
-#display1 {
+.lol-bg {
+    background: radial-gradient(circle at center, #0a1428 0%, #010a13 100%);
+    color: #f0e6d2;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 50px 20px;
+}
+
+.lol-official-title {
+    font-family: 'Cinzel', serif;
+    color: #a09b8c;
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 0.5em;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(160, 155, 140, 0.3);
+}
+
+.tool-title {
+    font-family: 'Cinzel', serif;
+    color: #c8aa6e;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-shadow: 0 0 20px rgba(160, 155, 140, 0.5);
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.action-area {
+    margin-bottom: 30px;
+    min-height: 60px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-#display2 {
+.team-grid {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 1200px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    min-height: 400px;
 }
 
-#display3 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#display4 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#display5 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#myButton {
-    font-size: 24px;
-    padding: 15px 30px;
-    cursor: pointer;
-    border-radius: 8px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-}
-
-/* カード全体のスタイル */
 .lane-card {
-    background: #1a1a1a;
-    /* ダークな背景 */
-    color: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    max-width: 400px;
-    border: 1px solid #333;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    font-family: sans-serif;
+    flex: 0 0 190px;
+    width: 190px;
+    background: rgba(1, 10, 19, 0.9);
+    border: 1px solid #785a28;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
 }
 
 .lane-header h3 {
-    color: #e4b34b;
-    /* ゴールド系のアクセント */
-    margin-top: 0;
-    border-bottom: 2px solid #e4b34b;
-    padding-bottom: 8px;
+    color: #c8aa6e;
+    font-size: 0.85rem;
     text-align: center;
+    border-bottom: 1px solid #785a28;
+    margin: 0 0 12px 0;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
 }
 
-/* チャンピオン部分 */
 .champ-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 10px;
-    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .champ-img {
-    width: 64px;
-    height: 64px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    /* 丸くする */
-    border: 2px solid #e4b34b;
-}
-
-.champ-info .label {
-    font-size: 0.8rem;
-    color: #aaa;
+    border: 2px solid #c8aa6e;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(200, 170, 110, 0.3);
 }
 
 .champ-info .name {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     font-weight: bold;
-    margin: 0;
+    color: #f0e6d2;
+    margin-top: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
 }
 
-/* アイテムグリッド（横に並べる） */
 .items-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4列で並べる */
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
 }
 
 .item-slot {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2px;
+    border-radius: 2px;
+    overflow: hidden;
 }
 
 .item-slot img {
-    width: 48px;
-    height: 48px;
-    border-radius: 4px;
-    background: #000;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    object-fit: cover;
     border: 1px solid #444;
+    z-index: 2;
+    background: #010a13;
+}
+
+.item-name-container {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.item-name-container {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    min-width: 0;
 }
 
 .item-name {
-    font-size: 0.65rem;
-    margin-top: 4px;
+    display: inline-block;
+    font-size: 0.7rem;
     color: #ccc;
-    display: block;
-    line-height: 1.2;
+    padding-right: 50px;
+    white-space: nowrap;
+    transition: color 0.3s;
 }
 
-/* ブーツとエンチャントを強調する場合 */
-.boots img {
-    border-color: #5bc0de;
+.item-slot:hover .item-name {
+    animation: marquee 4s linear infinite;
+    color: #f0e6d2;
 }
 
-.enchant img {
-    border-color: #d9534f;
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#myButton {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    padding: 12px 40px;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #1e2328 0%, #111519 100%);
+    color: #c8aa6e;
+    border: 2px solid #c8aa6e;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+#myButton:hover {
+    color: #f0e6d2;
+    border-color: #00c8c8;
+    box-shadow: 0 0 15px rgba(0, 200, 200, 0.4);
+    transform: translateY(-1px);
+}
+
+/* --- Smartphone Layout --- */
+@media (max-width: 800px) {
+    .lol-bg {
+        padding-top: 20px;
+    }
+
+    .lol-official-title {
+        font-size: 0.6rem;
+        letter-spacing: 0.3em;
+    }
+
+    .tool-title {
+        font-size: 1.5rem;
+    }
+
+    .team-grid {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+        overflow-x: hidden;
+        min-height: auto;
+    }
+
+    .lane-card {
+        flex: 1 1 auto;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .item-name {
+        font-size: 0.8rem;
+    }
 }

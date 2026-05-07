@@ -1,4 +1,3 @@
-// HTMLの要素を取得
 const btn = document.getElementById('myButton');
 const display1 = document.getElementById('display1');
 const display2 = document.getElementById('display2');
@@ -6,7 +5,6 @@ const display3 = document.getElementById('display3');
 const display4 = document.getElementById('display4');
 const display5 = document.getElementById('display5');
 
-// クリックイベントの処理
 btn.addEventListener('click', () => {
     LANE_TYPE.forEach((lane) => {
         let html = "";
@@ -33,7 +31,7 @@ btn.addEventListener('click', () => {
             case "ドラゴン":
                 display1.innerHTML = html;
                 break;
-            case "サポート":
+            case "ジャングル":
                 display2.innerHTML = html;;
                 break;
             case "ミッド":
@@ -42,7 +40,7 @@ btn.addEventListener('click', () => {
             case "バロン":
                 display4.innerHTML = html;;
                 break;
-            case "ジャングル":
+            case "サポート":
                 display5.innerHTML = html;;
                 break;
             default:

@@ -4,21 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoL select champion auto</title>
+    <title>LoL Auto Select Tool</title>
+    <!-- LoL風のフォントを追加 -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/data.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
 </head>
 
-<body>
+<body class="lol-bg">
 
-    <h1>Auto select</h1>
-    <button id="myButton">start select</button>
-    <div id="display1"></div>
-    <div id="display2"></div>
-    <div id="display3"></div>
-    <div id="display4"></div>
-    <div id="display5"></div>
+    <div class="main-container">
+        <div class="lol-official-title">LEAGUE OF LEGENDS</div>
+        <h1 class="tool-title">CHAMPION SELECT</h1>
+    
+        <div class="action-area">
+            <button id="myButton">START SELECT</button>
+        </div>
+
+        <div class="team-grid">
+            <div id="display1"></div>
+            <div id="display2"></div>
+            <div id="display3"></div>
+            <div id="display4"></div>
+            <div id="display5"></div>
+        </div>
+    </div>
+
 </body>
 
 </html>
