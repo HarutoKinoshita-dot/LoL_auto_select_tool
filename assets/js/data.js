@@ -170,8 +170,10 @@ const ALL_ITEMS = [
     { type: "物理", name: "ファントムダンサー", image: "assets/images/physical/ファントムダンサー.png" },
     { type: "物理", name: "マナムネ", image: "assets/images/physical/マナムネ.png" },
     { type: "物理", name: "マルモティウスの胃袋", image: "assets/images/physical/マルモティウスの胃袋.png" },
+    { type: "物理", name: "ムラマナ", image: "assets/images/physical/ムラマナ.png" },
     { type: "物理", name: "ブラッククリーバー", image: "assets/images/physical/ブラッククリーバー.png" },
     { type: "物理", name: "ブラッドサースター", image: "assets/images/physical/ブラッドサースター.png" },
+
     { type: "物理", name: "モータルリマインダー", image: "assets/images/physical/モータルリマインダー.png" },
     { type: "物理", name: "マグネティックブラスター", image: "assets/images/physical/マグネティックブラスター.png" },
     { type: "物理", name: "ルインドキングブレード", image: "assets/images/physical/ルインドキングブレード.png" },
@@ -179,6 +181,7 @@ const ALL_ITEMS = [
     { type: "物理", name: "妖夢の霊剣", image: "assets/images/physical/妖夢の霊剣.png" },
     { type: "物理", name: "毒蛇の牙", image: "assets/images/physical/毒蛇の牙.png" },
     { type: "物理", name: "グインソーレイジブレード", image: "assets/images/physical/グインソーレイジブレード.png" },
+    { type: "物理", name: "魂の転移", image: "assets/images/physical/魂の転移.png" },
     { type: "物理", name: "サンダードスカイ", image: "assets/images/physical/サンダードスカイ.png" },
     { type: "物理", name: "実験的ヘクスプレート", image: "assets/images/physical/実験的ヘクスプレート.png" },
     { type: "物理", name: "覇王のブラッドメイル", image: "assets/images/physical/覇王のブラッドメイル.png" },
