@@ -207,17 +207,25 @@ const ALL_ITEMS = [
     { type: "魔法", name: "マリグナンス", image: "assets/images/magic/マリグナンス.png" },
 
     // --- 防御アイテム (defense) ---
+    { type: "防御", name: "女神の涙", image: "assets/images/defense/女神の涙.png" },
+    { type: "防御", name: "波打つ鱗", image: "assets/images/defense/波打つ鱗.png" },
+    { type: "防御", name: "翼のムーンプレート", image: "assets/images/defense/翼のムーンプレート.png" },
     { type: "防御", name: "アイスボーンガントレット", image: "assets/images/defense/アイスボーンガントレット.png" },
     { type: "防御", name: "アマランスツインガード", image: "assets/images/defense/アマランスツインガード.png" },
+    { type: "防御", name: "ガーディアンエンジェル", image: "assets/images/defense/ガーディアンエンジェル.png" },
     { type: "防御", name: "ソーンメイル", image: "assets/images/defense/ソーンメイル.png" },
     { type: "防御", name: "サンファイアイージス", image: "assets/images/defense/サンファイアイージス.png" },
     { type: "防御", name: "ジークコンバージェンス", image: "assets/images/defense/ジークコンバージェンス.png" },
     { type: "防御", name: "デッドマンプレート", image: "assets/images/defense/デッドマンプレート.png" },
+    { type: "防御", name: "ステラックの篭手", image: "assets/images/defense/ステラックの篭手.png" },
     { type: "防御", name: "ドーンシュラウド", image: "assets/images/defense/ドーンシュラウド.png" },
+    { type: "防御", name: "タイタンハイドラ", image: "assets/images/defense/タイタンハイドラ.png" },
+    { type: "防御", name: "デスダンス", image: "assets/images/defense/デスダンス.png" },
     { type: "防御", name: "フィンブルウィンター", image: "assets/images/defense/フィンブルウィンター.png" },
     { type: "防御", name: "フローズンハート", image: "assets/images/defense/フローズンハート.png" },
     { type: "防御", name: "ランデュインオーメン", image: "assets/images/defense/ランデュインオーメン.png" },
     { type: "防御", name: "ワーモグアーマー", image: "assets/images/defense/ワーモグアーマー.png" },
+    { type: "防御", name: "冬の訪れ", image: "assets/images/defense/冬の訪れ.png" },
     { type: "防御", name: "心の鋼", image: "assets/images/defense/心の鋼.png" },
     { type: "防御", name: "焦炎の王冠", image: "assets/images/defense/焦炎の王冠.png" },
     { type: "防御", name: "背水のマント", image: "assets/images/defense/背水のマント.png" },
@@ -227,6 +235,7 @@ const ALL_ITEMS = [
     { type: "防御", name: "終わりなき絶望", image: "assets/images/defense/終わりなき絶望.png" },
     { type: "防御", name: "ケイニックルーケルン", image: "assets/images/defense/ケイニックルーケルン.png" },
     { type: "防御", name: "ヨードルトラップ", image: "assets/images/defense/ヨードルトラップ.png" },
+    { type: "防御", name: "覇王のブラッドメイル", image: "assets/images/defense/覇王のブラッドメイル.png" },
     { type: "防御", name: "騎士の誓い", image: "assets/images/defense/騎士の誓い.png" },
     { type: "防御", name: "リデンプション", image: "assets/images/defense/リデンプション.png" }
 ];
