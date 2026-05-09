@@ -191,6 +191,8 @@ const ALL_ITEMS = [
     { type: "魔法", name: "オケアノストライデント", image: "assets/images/magic/オケアノストライデント.png" },
     { type: "魔法", name: "コズミックドライブ", image: "assets/images/magic/コズミックドライブ.png" },
     { type: "魔法", name: "シャッタードクイーンクラウン", image: "assets/images/magic/シャッタードクイーンクラウン.png" },
+    { type: "魔法", name: "セラフエンブレイス", image: "assets/images/magic/セラフエンブレイス.png" },
+    { type: "魔法", name: "ナッシャートゥース", image: "assets/images/magic/ナッシャートゥース.png" },
     { type: "魔法", name: "モレロノミコン", image: "assets/images/magic/モレロノミコン.png" },
     { type: "魔法", name: "ホライゾンフォーカス", image: "assets/images/magic/ホライゾンフォーカス.png" },
     { type: "魔法", name: "メジャイソウルスティーラー", image: "assets/images/magic/メジャイソウルスティーラー.png" },
@@ -203,6 +205,7 @@ const ALL_ITEMS = [
     { type: "魔法", name: "ロッドオブエイジス", image: "assets/images/magic/ロッドオブエイジス.png" },
     { type: "魔法", name: "覚醒したソウルスティーラー", image: "assets/images/magic/覚醒したソウルスティーラー.png" },
     { type: "魔法", name: "超能力プロジェクター", image: "assets/images/magic/超能力プロジェクター.png" },
+    { type: "魔法", name: "グインソーレイジブレード", image: "assets/images/magic/グインソーレイジブレード.png" },
     { type: "魔法", name: "バンドルファンタジー", image: "assets/images/magic/バンドルファンタジー.png" },
     { type: "魔法", name: "マリグナンス", image: "assets/images/magic/マリグナンス.png" },
 
