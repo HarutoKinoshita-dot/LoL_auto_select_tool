@@ -6,13 +6,18 @@ const display4 = document.getElementById('display4');
 const display5 = document.getElementById('display5');
 
 btn.addEventListener('click', () => {
+    const selectedChampions = [];
+
     LANE_TYPE.forEach((lane) => {
         let html = "";
+
+        const champ = getRandomChampExcluding(lane.name, selectedChampions);
+        selectedChampions.push(champ.name);
 
         if (lane.name === "サポート") {
             html = createHtmlType1(
                 lane.name,
-                getRandomChampExcluding(lane.name),
+                champ,
                 getRandomItems(4),
                 getBoots(),
                 getSupportItem()
@@ -20,7 +25,7 @@ btn.addEventListener('click', () => {
         } else {
             html = createHtmlType2(
                 lane.name,
-                getRandomChampExcluding(lane.name),
+                champ,
                 getRandomItems(5),
                 getBoots(),
                 getEnchants()
@@ -32,16 +37,16 @@ btn.addEventListener('click', () => {
                 display1.innerHTML = html;
                 break;
             case "ジャングル":
-                display2.innerHTML = html;;
+                display2.innerHTML = html;
                 break;
             case "ミッド":
-                display3.innerHTML = html;;
+                display3.innerHTML = html;
                 break;
             case "バロン":
-                display4.innerHTML = html;;
+                display4.innerHTML = html;
                 break;
             case "サポート":
-                display5.innerHTML = html;;
+                display5.innerHTML = html;
                 break;
             default:
                 console.log("Unknown lane type");
@@ -50,8 +55,11 @@ btn.addEventListener('click', () => {
 });
 
 // champions
-function getRandomChampExcluding(excludeRole) {
-    const candidates = CHAMPIONS.filter(champ => !champ.roles.includes(excludeRole));
+function getRandomChampExcluding(excludeRole, alreadySelected = []) {
+    const candidates = CHAMPIONS.filter(champ =>
+        !champ.roles.includes(excludeRole) && !alreadySelected.includes(champ.name)
+    );
+
     if (candidates.length === 0) {
         return null;
     }
